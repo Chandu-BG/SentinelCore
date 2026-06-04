@@ -1,0 +1,138 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# NovaSentinel — .gitignore
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Python bytecode ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+env/
+venv/
+.venv/
+ENV/
+.env
+
+# ── Build & Distribution ───────────────────────────────────────────────────────
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ── PyInstaller ────────────────────────────────────────────────────────────────
+*.spec.bak
+main.spec
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache
+coverage.xml
+*.cover
+
+# ── IDE & editor ──────────────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+.kiro/
+Thumbs.db
+desktop.ini
+
+# ── Runtime-generated databases & caches ──────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+cache/
+metadata/
+
+# ── Secrets & sensitive credentials ───────────────────────────────────────────
+.env
+*.key
+quarantine.key
+config/openai_key.txt
+config/permissions.json
+config/last_scan.json
+config/version.json
+config/version.json.backup
+
+# ── Logs (can grow very large) ────────────────────────────────────────────────
+*.log
+*.log.*
+sentinelcore.log*
+crash_log.txt
+build_output*.log
+build_output.log
+
+# ── Runtime data directories (user-generated, not source code) ────────────────
+sandbox/
+quarantine_vault/
+quarantine/
+crash_reports/
+export/
+scratch/
+cache/
+metadata/
+themes/
+
+# ── Temporary & generated output files ────────────────────────────────────────
+live_scan*.txt
+live_scan_console.txt
+live_scan_report.txt
+live_scan.py
+realworld_output.txt
+realworld_test.py
+build_output*.log
+build_output.log
+design.md
+tasks.md
+requirements.md
+*.db-shm
+*.db-wal
+
+# ── Migration / one-time conversion scripts (not app code) ────────────────────
+convert_*.py
+git_sync.py
+
+# ── Binary / compiled / media ─────────────────────────────────────────────────
+*.exe
+*.msi
+*.mkv
+*.mp4
+*.zip
+*.iso
+*.dll
+
+# ── Android build artifacts ───────────────────────────────────────────────────
+android/
+
+# ── ML model binaries (too large for Git; download separately) ────────────────
+models/*.pkl
+models/*.npy
+models/*.pkl.bak
+
+# ── Keep these files tracked even if patterns above would exclude them ─────────
+!NovaSentinel.spec
+!assets/
+!models/README.md
+!models/yara_rules/
+!config/__init__.py
+!config/themes/

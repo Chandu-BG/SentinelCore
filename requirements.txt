@@ -1,0 +1,55 @@
+# NovaSentinel — Python Dependencies
+# Install with: pip install -r requirements.txt
+# Python 3.11+ required (3.11 recommended for PyInstaller compatibility)
+
+# ── System Monitoring ──────────────────────────────────────────────────────────
+psutil>=5.9.0
+
+# ── Machine Learning ───────────────────────────────────────────────────────────
+scikit-learn>=1.3.0
+numpy>=1.24.0
+joblib>=1.3.0
+# xgboost and lightgbm are used ONLY by training scripts (scripts/train_*.py).
+# The packaged app falls back to pattern-only detection if models are absent.
+# Uncomment to install for model training:
+# xgboost>=1.7.0
+# lightgbm>=4.0.0
+
+# ── Cryptography (AES-256 Quarantine Vault) ───────────────────────────────────
+cryptography>=41.0.0
+
+# ── File System Watching ───────────────────────────────────────────────────────
+watchdog>=3.0.0
+
+# ── HTTP Client (Ollama AI + API lookups) ─────────────────────────────────────
+requests>=2.31.0
+urllib3>=2.0.0
+certifi>=2023.7.22
+
+# ── GUI ────────────────────────────────────────────────────────────────────────
+PyQt6>=6.6.0
+pyqtgraph>=0.13.3
+
+# ── PE Analysis ───────────────────────────────────────────────────────────────
+pefile>=2023.2.7
+
+# ── YARA Rules (optional — app works without it) ──────────────────────────────
+# yara-python requires pre-compiled YARA C library.
+# Install separately: pip install yara-python>=4.3.1
+# yara-python>=4.3.1
+
+# ── GPU Monitoring (optional — replaces deprecated pynvml) ────────────────────
+# Provides GPU load data in Performance view. App works without this.
+# nvidia-ml-py>=12.0.0
+
+# ── Windows-specific (optional) ───────────────────────────────────────────────
+wmi>=1.5.1; sys_platform == "win32"
+pywin32>=306; sys_platform == "win32"
+
+# ── Testing ────────────────────────────────────────────────────────────────────
+pytest>=7.4.0
+pytest-timeout>=2.1.0
+hypothesis>=6.82.0
+
+# ── Build (optional — for packaging only) ─────────────────────────────────────
+# pyinstaller>=6.0.0

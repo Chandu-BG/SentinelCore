@@ -1,0 +1,34 @@
+QMainWindow, QWidget#centralWidget {
+    background-color: {{COLOR_BG}};
+    color: {{COLOR_TEXT}};
+}
+QWidget#sidebar {
+    background-color: {{COLOR_SURFACE}};
+    border-right: 1px solid {{COLOR_BORDER}};
+    min-width: 220px;
+    max-width: 220px;
+}
+QPushButton#navButton {
+    background: transparent;
+    color: {{COLOR_TEXT}};
+    border: none;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 14px;
+}
+QPushButton#navButton:hover {
+    background-color: {{COLOR_ACCENT}};
+    border-radius: 6px;
+}
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: {{COLOR_SURFACE}};
+    border: 1px solid {{COLOR_BORDER}};
+    border-radius: 4px;
+    padding: 6px;
+}
+QHeaderView::section {
+    background-color: {{COLOR_SURFACE}};
+    color: {{COLOR_TEXT}};
+    border: 1px solid {{COLOR_BORDER}};
+    padding: 4px;
+}

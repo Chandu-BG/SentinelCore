@@ -1,0 +1,39 @@
+# NovaSentinel — Git Line Ending Configuration
+# Ensures consistent line endings across platforms
+
+# Default: normalize all text files to LF in repository
+* text=auto
+
+# Python source files — always LF
+*.py text eol=lf
+
+# Shell scripts — always LF
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Markdown — LF
+*.md text eol=lf
+
+# Config and data files — LF
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.cfg text eol=lf
+*.ini text eol=lf
+*.txt text eol=lf
+*.qss text eol=lf
+*.spec text eol=lf
+*.yar text eol=lf
+*.iss text eol=crlf
+
+# Binary files — no EOL normalization
+*.png binary
+*.jpg binary
+*.ico binary
+*.pkl binary
+*.npy binary
+*.exe binary
+*.dll binary
+*.zip binary
+*.msi binary
